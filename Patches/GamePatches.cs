@@ -1,9 +1,7 @@
 using System.Linq;
 using BTD_Mod_Helper.Extensions;
 using HarmonyLib;
-using Il2CppAssets.Scripts.Models;
 using Il2CppAssets.Scripts.Models.Towers;
-using Il2CppAssets.Scripts.Models.Towers.Behaviors;
 using Il2CppAssets.Scripts.Simulation;
 using Il2CppAssets.Scripts.Simulation.Towers;
 using Il2CppAssets.Scripts.Unity.UI_New.InGame;
@@ -102,25 +100,5 @@ internal static class InputManager_CreatePlacementTower
             nextPlace = null;
             nextCost = 0;
         }
-    }
-}
-
-/// <summary>
-/// Hijack a mutator to track powers from shop
-/// </summary>
-[HarmonyPatch(typeof(RateSupportModel.RateSupportMutator), nameof(RateSupportModel.RateSupportMutator.Mutate))]
-internal static class RateSupportMutator_Mutate
-{
-    [HarmonyPrefix]
-    internal static bool Prefix(RateSupportModel.RateSupportMutator __instance, Model model, ref bool __result)
-    {
-        if (__instance.id != PowersInShopMod.MutatorId || !model.Is(out TowerModel towerModel) ||
-            !PowersInShopMod.PowersByName.TryGetValue(towerModel.baseId, out var powerTower) ||
-            powerTower is not ModPowerTowerBase modPowerTowerBase) return true;
-
-        modPowerTowerBase.MutateTower(towerModel);
-
-        __result = true;
-        return false;
     }
 }

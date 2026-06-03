@@ -10,7 +10,6 @@ using BTD_Mod_Helper.Extensions;
 using Il2CppAssets.Scripts.Data;
 using Il2CppAssets.Scripts.Models.Gameplay.Mods;
 using Il2CppAssets.Scripts.Models.Profile;
-using Il2CppAssets.Scripts.Models.Towers.Behaviors;
 using Il2CppAssets.Scripts.Simulation.Input;
 using Il2CppAssets.Scripts.Simulation.Towers;
 using Il2CppAssets.Scripts.Unity;
@@ -119,10 +118,9 @@ public class PowersInShopMod : BloonsTD6Mod
         chimps.mutatorMods = chimpsMutators.ToIl2CppReferenceArray();
     }
 
-    public static void MarkAsPowerFromShop(Tower tower) =>
-        tower.AddMutator(new RateSupportModel.RateSupportMutator(true, MutatorId, 1, 10, null));
+    public static void MarkAsPowerFromShop(Tower tower) => tower.AddMutator<PowersInShopMutator>();
 
-    public static bool IsPowerFromShop(Tower tower) => tower.IsMutatedBy(MutatorId);
+    public static bool IsPowerFromShop(Tower tower) => tower.IsMutatedBy<PowersInShopMutator>();
 
     public override void OnTowerSaved(Tower tower, TowerSaveDataModel saveData)
     {

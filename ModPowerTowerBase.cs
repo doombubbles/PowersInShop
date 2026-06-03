@@ -9,6 +9,7 @@ using Il2CppAssets.Scripts.Models.Powers;
 using Il2CppAssets.Scripts.Models.Towers;
 using Il2CppAssets.Scripts.Unity;
 using Il2CppNinjaKiwi.Common.ResourceUtils;
+using UnityEngine;
 
 namespace PowersInShop;
 
@@ -17,7 +18,7 @@ namespace PowersInShop;
 /// </summary>
 public abstract class ModPowerTowerBase : ModTower<Powers>, IPowerTower, IModSettings
 {
-    public override bool DontAddToShop => Cost < 0;
+    public override bool DontAddToShop => !Application.isBatchMode && Cost < 0;
     public override string DisplayName => $"[{Name}]";
 
     public abstract int BaseCost { get; }
