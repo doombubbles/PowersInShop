@@ -1,0 +1,31 @@
+[package]
+name = "PowersInShop"
+namespace = "doombubbles"
+description = "Adds many of the Monkey Money Powers to the in-game shop for purchase with normal currency."
+websiteUrl = "https://github.com/doombubbles/PowersInShop"
+
+[package.dependencies]
+LavaGang-MelonLoader = "0.7.3"
+doombubbles-Btd6ModHelper = "3.6.5"
+
+[build]
+icon = "./Powers-Button.png"
+readme = "./README.md"
+outdir = "bin"
+
+[[build.copy]]
+source = "./bin/Release/PowersInShop.dll"
+target = "PowersInShop.dll"
+
+[[build.copy]]
+source = "./CHANGELOG.md"
+target = "./CHANGELOG.md"
+
+[[build.copy]]
+source = "./LICENSE"
+target = "./LICENSE"
+
+[publish]
+repository = "https://thunderstore.io"
+communities = ["bloons-td-6"]
+categories = ["mods"]

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using BTD_Mod_Helper;
@@ -21,6 +21,7 @@ using PowersInShop;
 
 [assembly: MelonInfo(typeof(PowersInShopMod), ModHelperData.Name, ModHelperData.Version, ModHelperData.RepoOwner)]
 [assembly: MelonGame("Ninja Kiwi", "BloonsTD6")]
+[assembly: MelonGame("Ninja Kiwi", "BloonsTD6-Epic")]
 
 namespace PowersInShop;
 
