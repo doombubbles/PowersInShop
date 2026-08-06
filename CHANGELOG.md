@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.1.2] - 2026-08-06
+
 - Fixed for BTD6 v56
 - Added Portable Lake Pro to Shop
     - Standard rules apply for needing to have already unlocked the real Power Pro in order to use
@@ -146,7 +148,8 @@ Due to v34 breakage, Power Towers won't be back to appearing in the Monkeys Scre
 
 - Update for Mod Helper 3.0 alpha
 
-[unreleased]: https://github.com/doombubbles/PowersInShop/compare/3.1.1...HEAD
+[unreleased]: https://github.com/doombubbles/PowersInShop/compare/3.1.2...HEAD
+[3.1.2]: https://github.com/doombubbles/PowersInShop/compare/3.1.1...3.1.2
 [3.1.1]: https://github.com/doombubbles/PowersInShop/compare/3.1.0...3.1.1
 [3.1.0]: https://github.com/doombubbles/PowersInShop/compare/3.0.5...3.1.0
 [3.0.5]: https://github.com/doombubbles/PowersInShop/compare/3.0.4...3.0.5
