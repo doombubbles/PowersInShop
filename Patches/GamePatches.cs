@@ -69,7 +69,7 @@ internal static class InputManager_CreatePlacementTower
 
         var newTower = __instance.Bridge.Model.GetPowerWithId(powerTower.Name).tower.Duplicate();
 
-        var owner = InGame.Bridge.MyPlayerNumber;
+        var owner = InGame.Bridge.GetInputId();
         var sim = InGame.Bridge.Simulation;
 
         var height = sim.Map.GetTerrainHeight(new Il2CppAssets.Scripts.Simulation.SMath.Vector2(pos));

@@ -57,7 +57,7 @@ public class TSMThemeRecharge_OnButtonPress
 
         InGame.Bridge.Simulation.RemoveCash(cost, Simulation.CashType.Powers, tower.owner,
             Simulation.CashSource.Normal);
-        tower.PerformCustomUIAction(button.buttonId);
+        tower.PerformCustomUIAction(InGame.Bridge.GetInputId(), button.buttonId);
 
         return false;
     }

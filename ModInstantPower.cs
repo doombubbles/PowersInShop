@@ -85,7 +85,7 @@ public abstract class ModInstantPower : ModFakeTower<Powers>, IPowerTower
 
     public virtual void ActivatePower(Vector2 at, PowerModel powerModel)
     {
-        Sim.powerManager.Activate(at, ref powerModel, InGame.Bridge.MyPlayerNumber);
+        Sim.powerManager.Activate(at, ref powerModel, InGame.Bridge.GetInputId());
     }
 
 }

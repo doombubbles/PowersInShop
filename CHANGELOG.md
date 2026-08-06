@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+- Fixed for BTD6 v56
+- Added Portable Lake Pro to Shop
+    - Standard rules apply for needing to have already unlocked the real Power Pro in order to use
+
+
 ## [3.1.1] - 2026-06-03
 
 - Updated for BTD6 v55

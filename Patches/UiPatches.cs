@@ -133,7 +133,7 @@ internal static class InGame_ShowUpgradeTree1
 /// <summary>
 /// Allow looking at powers pro upgrades in sandbox
 /// </summary>
-[HarmonyPatch(typeof(InGame), nameof(InGame.ShowUpgradeTree), typeof(TowerModel), typeof(PlayerContext.Context),
+[HarmonyPatch(typeof(InGame), nameof(InGame.ShowUpgradeTree), typeof(TowerModel), typeof(PlayerContext),
     typeof(bool))]
 internal static class InGame_ShowUpgradeTree2
 {
